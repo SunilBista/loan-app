@@ -48,12 +48,12 @@ export function StatusBadge({
       variant="outline"
       className={cn(
         "text-xs font-semibold px-3 py-1.5 flex items-center gap-1.5 transition-all duration-200 hover:shadow-md",
-        config.className,
+        config?.className,
         className,
       )}
     >
-      {config.icon}
-      {config.label}
+      {config?.icon}
+      {config?.label}
     </Badge>
   );
 }

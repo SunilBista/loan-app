@@ -1,4 +1,5 @@
 import { ApplicationList } from "@/components/ApplicationList";
+import { ApplicationOverview } from "@/components/ApplicationOverview";
 import { ApplicationSummary } from "@/components/ApplicationSummary";
 import { Building2 } from "lucide-react";
 
@@ -45,6 +46,10 @@ export default function Home() {
             </p>
             <ApplicationList />
           </div>
+        </div>
+        <div className="space-y-8">
+          <ApplicationOverview />
+          <div className="rounded-lg p-6"></div>
         </div>
       </main>
     </div>

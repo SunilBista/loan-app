@@ -40,3 +40,24 @@ export const colorClasses = {
 } as const;
 
 export type ColorType = keyof typeof colorClasses;
+
+export type StatusEvent = {
+  status: ApplicationStatus;
+  message: string;
+  timestamp: string;
+};
+
+export interface ApplicantDetailsProps {
+  name: string;
+  annualIncome: number;
+  employmentStatus: string;
+  creditScore: number;
+}
+
+export interface ApplicantInfoCardProps {
+  name: string;
+  loanId: string;
+  applicationDate: string;
+  loanAmount: number;
+  status: ApplicationStatus;
+}

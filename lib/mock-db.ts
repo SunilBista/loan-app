@@ -1,4 +1,4 @@
-import { LoanApplication } from "./type";
+import { ApplicationStatus, LoanApplication } from "./type";
 
 export const initialApplications: LoanApplication[] = [
   {
@@ -72,5 +72,28 @@ export const initialApplications: LoanApplication[] = [
         notes: "Application submitted",
       },
     ],
+  },
+];
+
+export const mockStatusEvents = [
+  {
+    status: "Pending" as ApplicationStatus,
+    message: "Application submitted successfully.",
+    timestamp: "2026-02-10 09:30 AM",
+  },
+  {
+    status: "Under Review" as ApplicationStatus,
+    message: "Your application is being reviewed by the team.",
+    timestamp: "2026-02-11 02:15 PM",
+  },
+  {
+    status: "Approved" as ApplicationStatus,
+    message: "Congratulations! Your application has been approved.",
+    timestamp: "2026-02-12 11:00 AM",
+  },
+  {
+    status: "Rejected" as ApplicationStatus,
+    message: "We regret to inform you that your application has been rejected.",
+    timestamp: "2026-02-12 11:00 AM",
   },
 ];
