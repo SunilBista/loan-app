@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
+import { ApplicationStatus } from "@/lib/type";
 import { cn } from "@/lib/utils";
-import type { ApplicationStatus } from "@/lib/mock-db";
+
 import { Clock, Eye, CheckCircle, XCircle } from "lucide-react";
 import { JSX } from "react";
 

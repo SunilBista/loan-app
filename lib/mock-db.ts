@@ -1,27 +1,4 @@
-export type ApplicationStatus =
-  | "Pending"
-  | "Under Review"
-  | "Approved"
-  | "Rejected";
-
-export interface StatusHistory {
-  status: ApplicationStatus;
-  timestamp: string;
-  notes: string;
-}
-
-export interface LoanApplication {
-  id: string;
-  applicantName: string;
-  loanAmount: number;
-  loanPurpose: string;
-  annualIncome: number;
-  employmentStatus: string;
-  creditScore: number;
-  applicationDate: string;
-  currentStatus: ApplicationStatus;
-  statusHistory: StatusHistory[];
-}
+import { LoanApplication } from "./type";
 
 export const initialApplications: LoanApplication[] = [
   {
