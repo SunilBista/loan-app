@@ -48,26 +48,18 @@ export function ApplicantInfoCard({
         </div>
 
         <CardAction className="w-full sm:w-auto">
-          <div
-            className="
-              w-full sm:w-auto
-              rounded-lg
-              bg-white
-              text-gray-900
-              px-4 py-2
-              shadow-sm
-              text-right
-            "
-          >
-            <p className="text-[10px] uppercase  text-white-500">
-              Requested Loan Amount
-            </p>
+          <div className="w-full rounded-xl bg-white text-gray-900 px-4 py-3 shadow-sm flex flex-col sm:block">
+            <div className="flex flex-col sm:block gap-1 sm:gap-0">
+              <p className="text-xs uppercase tracking-wide text-white-500">
+                Requested Loan Amount
+              </p>
 
-            <p className="text-base font-semibold">
-              {formatCurrency(loanAmount)}
-            </p>
+              <p className="text-lg sm:text-base font-semibold">
+                {formatCurrency(loanAmount)}
+              </p>
+            </div>
 
-            <div className="mt-1 flex justify-end">
+            <div className="mt-2 sm:mt-1 flex">
               <StatusBadge status={status} />
             </div>
           </div>
