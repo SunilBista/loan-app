@@ -79,10 +79,10 @@ export function ApplicationList() {
                     {app.applicantName}
                   </div>
                 </TableCell>
-                <TableCell className="font-semibold text-gray-900 py-5">
+                <TableCell className="font-medium text-gray-900 py-5">
                   {formatCurrency(app.loanAmount)}
                 </TableCell>
-                <TableCell className="text-gray-600 py-5">
+                <TableCell className="font-medium text-gray-900 py-5">
                   {formatDate(app.applicationDate)}
                 </TableCell>
                 <TableCell className="py-5">
