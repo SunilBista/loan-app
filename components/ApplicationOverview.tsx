@@ -40,7 +40,7 @@ export const ApplicationOverview = () => {
             status={currentApplication.currentStatus}
           />
         </div>
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3 items-start">
           <ApplicantDetails
             name={currentApplication.applicantName}
             annualIncome={currentApplication.annualIncome}
