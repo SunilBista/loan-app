@@ -31,7 +31,7 @@ This is a comprehensive loan application management system designed for financia
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20.4+
 - npm, yarn, pnpm, or bun package manager
 
 ### Installation
