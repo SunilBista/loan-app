@@ -31,7 +31,7 @@ export const StatusHistory = ({ events }: { events: StatusEvent[] }) => {
                   {formatDateWithTime(event.timestamp)}
                 </span>
               </div>
-              <p className="text-gray-600 mt-2">{event.message}</p>
+              <p className="text-gray-600 mt-2">{event.notes}</p>
             </div>
           </div>
         ))}

@@ -4,13 +4,13 @@ import { formatCurrency, formatDate } from "@/lib/utils";
 
 interface LoanDetailsProps {
   loanAmount: number;
-  purpose: string;
+  loanPurpose: string;
   applicationDate: string;
 }
 
 export const LoanDetails = ({
   loanAmount,
-  purpose,
+  loanPurpose,
   applicationDate,
 }: LoanDetailsProps) => {
   return (
@@ -22,7 +22,7 @@ export const LoanDetails = ({
           label="Loan Amount"
           value={formatCurrency(loanAmount)}
         />
-        <DetailItem icon={<Target />} label="Purpose" value={purpose} />
+        <DetailItem icon={<Target />} label="Purpose" value={loanPurpose} />
         <DetailItem
           icon={<Calendar />}
           label="Application Date"

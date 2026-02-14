@@ -1,9 +1,15 @@
+"use client";
 import { ApplicationList } from "@/components/ApplicationList";
 import { ApplicationOverview } from "@/components/ApplicationOverview";
 import { ApplicationSummary } from "@/components/ApplicationSummary";
+import {
+  LoanApplicationProvider,
+  useLoanApplication,
+} from "@/context/loan-application-context";
 import { Building2 } from "lucide-react";
 
-export default function Home() {
+function ApplicationContent() {
+  const { selectedId } = useLoanApplication();
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-100 to-blue-100">
       <header className="sticky top-0 z-10 border-b bg-white/80 backdrop-blur-md shadow-sm">
@@ -32,26 +38,37 @@ export default function Home() {
       </header>
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="space-y-8">
-          <div className="">
-            <ApplicationSummary />
+        {selectedId ? (
+          <div className="space-y-8">
+            <ApplicationOverview />
+            <div className="rounded-lg p-6"></div>
           </div>
+        ) : (
+          <div className="space-y-8">
+            <div className="">
+              <ApplicationSummary />
+            </div>
 
-          <div className="">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Application Dashboard
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Monitor and manage loan applications in real-time
-            </p>
-            <ApplicationList />
+            <div className="">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Application Dashboard
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Monitor and manage loan applications
+              </p>
+              <ApplicationList />
+            </div>
           </div>
-        </div>
-        <div className="space-y-8">
-          <ApplicationOverview />
-          <div className="rounded-lg p-6"></div>
-        </div>
+        )}
       </main>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <LoanApplicationProvider>
+      <ApplicationContent />
+    </LoanApplicationProvider>
   );
 }

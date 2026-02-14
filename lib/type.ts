@@ -43,7 +43,7 @@ export type ColorType = keyof typeof colorClasses;
 
 export type StatusEvent = {
   status: ApplicationStatus;
-  message: string;
+  notes: string;
   timestamp: string;
 };
 
@@ -61,3 +61,18 @@ export interface ApplicantInfoCardProps {
   loanAmount: number;
   status: ApplicationStatus;
 }
+
+export interface LoanState {
+  applications: LoanApplication[];
+  selectedId: string | null;
+}
+
+export type LoanAction =
+  | {
+      type: "UPDATE_STATUS";
+      payload: { id: string; status: ApplicationStatus; notes?: string };
+    }
+  | { type: "RESET"; payload: { id: string } }
+  | { type: "RESET_ALL" }
+  | { type: "SELECT"; payload: { id: string } }
+  | { type: "DESELECT" };

@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { initialApplications } from "@/lib/mock-db";
+import { useLoanApplication } from "@/context/loan-application-context";
 import { CardDetailsType, colorClasses } from "@/lib/type";
 import { formatCurrency } from "@/lib/utils";
 import { DollarSign, FileText, Clock, Eye } from "lucide-react";
@@ -33,7 +33,7 @@ const CardDetails = ({
 };
 
 export const ApplicationSummary = () => {
-  const applications = initialApplications;
+  const { applications } = useLoanApplication();
 
   const summary = applications.reduce(
     (acc, app) => {

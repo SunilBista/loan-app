@@ -10,12 +10,17 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight } from "lucide-react";
-import { initialApplications } from "@/lib/mock-db";
 import { StatusBadge } from "./ui/status-badge";
 import { formatCurrency, formatDate } from "@/lib/utils";
+import { useLoanApplication } from "@/context/loan-application-context";
 
 export function ApplicationList() {
-  if (initialApplications.length === 0) {
+  const { applications, selectApplication } = useLoanApplication();
+
+  const handleApplicationClick = (id: string) => {
+    selectApplication(id);
+  };
+  if (applications.length === 0) {
     return (
       <Card>
         <CardHeader>
@@ -57,11 +62,11 @@ export function ApplicationList() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {initialApplications.map((app, index) => (
+            {applications.map((app, index) => (
               <TableRow
-                key={app.id}
+                key={index}
                 className="cursor-pointer hover:bg-orange-50 transition-colors duration-150 group border-b border-gray-100"
-                //onClick={() => console.log(`Selected application ${app.id}`)}
+                onClick={() => handleApplicationClick(app.id)}
                 role="link"
                 tabIndex={0}
                 aria-label={`View details for ${app.applicantName}, ${app.id}`}

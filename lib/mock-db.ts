@@ -10,12 +10,17 @@ export const initialApplications: LoanApplication[] = [
     employmentStatus: "Full-time",
     creditScore: 720,
     applicationDate: "2024-12-15",
-    currentStatus: "Pending",
+    currentStatus: "Under Review",
     statusHistory: [
       {
         status: "Pending",
         timestamp: "2024-12-15T09:30:00Z",
-        notes: "Application submitted",
+        notes: "Application submitted successfully.",
+      },
+      {
+        status: "Under Review",
+        timestamp: "2024-12-15T09:30:00Z",
+        notes: "Application is being reviewed by the officer.",
       },
     ],
   },
@@ -33,7 +38,7 @@ export const initialApplications: LoanApplication[] = [
       {
         status: "Pending",
         timestamp: "2024-12-16T09:30:00Z",
-        notes: "Application submitted",
+        notes: "Application submitted successfully.",
       },
     ],
   },
@@ -51,7 +56,7 @@ export const initialApplications: LoanApplication[] = [
       {
         status: "Pending",
         timestamp: "2024-12-15T09:30:00Z",
-        notes: "Application submitted",
+        notes: "Application submitted successfully.",
       },
     ],
   },
@@ -69,31 +74,23 @@ export const initialApplications: LoanApplication[] = [
       {
         status: "Pending",
         timestamp: "2024-12-15T09:30:00Z",
-        notes: "Application submitted",
+        notes: "Application submitted successfully.",
       },
     ],
   },
 ];
 
-export const mockStatusEvents = [
+export const DEFAULT_STATUS_NOTES: Record<ApplicationStatus, string> = {
+  Pending: "Application submitted successfully.",
+  "Under Review": "Application is being reviewed by the officer.",
+  Approved: "Application approved by the officer.",
+  Rejected: "Application rejected by the officer.",
+};
+
+export const VALID_TRANSITIONS: Record<ApplicationStatus, ApplicationStatus[]> =
   {
-    status: "Pending" as ApplicationStatus,
-    message: "Application submitted successfully.",
-    timestamp: "2026-02-10 09:30 AM",
-  },
-  {
-    status: "Under Review" as ApplicationStatus,
-    message: "Your application is being reviewed by the team.",
-    timestamp: "2026-02-11 02:15 PM",
-  },
-  {
-    status: "Approved" as ApplicationStatus,
-    message: "Congratulations! Your application has been approved.",
-    timestamp: "2026-02-12 11:00 AM",
-  },
-  {
-    status: "Rejected" as ApplicationStatus,
-    message: "We regret to inform you that your application has been rejected.",
-    timestamp: "2026-02-12 11:00 AM",
-  },
-];
+    Pending: ["Under Review"],
+    "Under Review": ["Approved", "Rejected"],
+    Approved: [],
+    Rejected: [],
+  };
