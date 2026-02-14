@@ -9,12 +9,15 @@ import {
 import { Building2 } from "lucide-react";
 
 function ApplicationContent() {
-  const { selectedId } = useLoanApplication();
+  const { selectedId, deselectApplication } = useLoanApplication();
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-100 to-blue-100">
       <header className="sticky top-0 z-10 border-b bg-white/80 backdrop-blur-md shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
+          <div
+            className="flex items-center gap-3 cursor-pointer"
+            onClick={deselectApplication}
+          >
             <div className="flex items-center justify-center w-10 h-10 bg-(--primary-color) rounded-lg">
               <Building2 className="h-6 w-6 text-white" />
             </div>
