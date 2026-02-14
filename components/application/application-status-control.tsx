@@ -121,7 +121,7 @@ const ApplicationStatusControl = ({
           }
           disabled={isLocked}
         >
-          <SelectTrigger className="w-full sm:w-auto cursor-pointer">
+          <SelectTrigger className="w-full sm:w-full cursor-pointer">
             <SelectValue placeholder="Select Status" />
           </SelectTrigger>
           <SelectContent>
@@ -144,7 +144,7 @@ const ApplicationStatusControl = ({
 
         {!isLocked && (
           <Button
-            className="mt-4 w-full sm:w-auto cursor-pointer bg-green-600 hover:bg-green-700"
+            className="mt-4 w-full sm:w-full cursor-pointer bg-green-600 hover:bg-green-700"
             onClick={() => setOpen(true)}
           >
             Update
