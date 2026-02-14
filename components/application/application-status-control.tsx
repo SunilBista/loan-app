@@ -147,7 +147,7 @@ const ApplicationStatusControl = ({
             className="mt-4 w-full sm:w-auto cursor-pointer bg-green-600 hover:bg-green-700"
             onClick={() => setOpen(true)}
           >
-            Submit
+            Update
           </Button>
         )}
       </div>
