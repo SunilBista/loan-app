@@ -25,6 +25,7 @@ This is a comprehensive loan application management system designed for financia
   - [Lucide React](https://lucide.dev/) icons
 - **State Management**: React Context with useReducerp
 - **Notifications**: [Sonner](https://sonner.emilkowal.ski/) toast library
+- **Testing**: -[Vitest](https://vitest.dev/) -[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## Project Structure
 
@@ -101,6 +102,7 @@ loan-app/
 - `npm run build` - Create production build
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run test` - Run test
 
 ## Design Decisions & Assumptions
 
