@@ -21,12 +21,6 @@ vi.mock("@/components/ui/card", () => ({
   ),
 }));
 
-vi.mock("../ui/status-badge", () => ({
-  StatusBadge: ({ status }: any) => (
-    <span data-testid="status-badge">{status}</span>
-  ),
-}));
-
 describe("ApplicantInfoCard", () => {
   it("renders applicant details correctly", () => {
     const formatCurrencySpy = vi
@@ -50,8 +44,6 @@ describe("ApplicantInfoCard", () => {
     );
 
     expect(screen.getByText("$50,000")).toBeInTheDocument();
-
-    expect(screen.getByTestId("status-badge")).toHaveTextContent("Pending");
 
     formatCurrencySpy.mockRestore();
   });

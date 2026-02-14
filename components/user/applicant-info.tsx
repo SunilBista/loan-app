@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/card";
 import { formatCurrency } from "@/lib/utils";
 import { ApplicantInfoCardProps } from "@/lib/type";
-import { StatusBadge } from "../ui/status-badge";
 
 export function ApplicantInfoCard({
   name,
@@ -57,10 +56,6 @@ export function ApplicantInfoCard({
               <p className="text-lg sm:text-base font-semibold">
                 {formatCurrency(loanAmount)}
               </p>
-            </div>
-
-            <div className="mt-2 sm:mt-1 flex">
-              <StatusBadge status={status} />
             </div>
           </div>
         </CardAction>
