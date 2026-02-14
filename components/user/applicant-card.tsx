@@ -12,7 +12,7 @@ export const ApplicantDetails = ({
   return (
     <div className="bg-white shadow rounded-lg p-4">
       <h2 className="font-semibold text-lg mb-4">Applicant Details</h2>
-      <div className="space-y-3">
+      <div className="-space-y-3">
         <DetailItem icon={<User />} label="Full Name" value={name} />
         <DetailItem
           icon={<DollarSign />}

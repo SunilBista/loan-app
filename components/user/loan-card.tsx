@@ -16,7 +16,7 @@ export const LoanDetails = ({
   return (
     <div className="bg-white shadow rounded-lg p-4">
       <h2 className="font-semibold text-lg mb-4">Loan Details</h2>
-      <div className="space-y-3">
+      <div className="space-y-6">
         <DetailItem
           icon={<DollarSign />}
           label="Loan Amount"

@@ -2,7 +2,6 @@ import { LoanDetails } from "./user/loan-card";
 import ApplicationStatusControl from "./application/application-status-control";
 import { initialApplications } from "@/lib/mock-db";
 import { ApplicantDetails } from "./user/applicant-card";
-import { ApplicantInfoCard } from "./user/applicant-info";
 import { StatusHistory } from "./application/status-history";
 import { ArrowLeft } from "lucide-react";
 import { useLoanApplication } from "@/context/loan-application-context";
@@ -19,27 +18,21 @@ export const ApplicationOverview = () => {
 
   return (
     <div className="space-y-4">
-      <div
-        className="flex w-50 items-center gap-4 rounded-full hover:bg-gray-100 transition-colors duration-150"
-        title="Back to application list"
-      >
-        <ArrowLeft
-          className=" text-gray-500 w-10 h-8 cursor-pointer "
-          onClick={deselectApplication}
-        />
-      </div>
-      <h2 className="text-2xl font-bold pt-3">Application Overview</h2>
-
-      <div className="w-full">
-        <div className="mb-6">
-          <ApplicantInfoCard
-            name={currentApplication.applicantName}
-            loanId={currentApplication.id}
-            applicationDate={currentApplication.applicationDate}
-            loanAmount={currentApplication.loanAmount}
-            status={currentApplication.currentStatus}
+      <h2 className="text-2xl font-bold pt-3">
+        <div
+          className="inline w-50 items-center gap-4 rounded-full hover:bg-gray-100 transition-colors duration-150"
+          title="Back to application list"
+        >
+          {" "}
+          <ArrowLeft
+            className="inline text-gray-500 w-10 h-8 cursor-pointer mr-2"
+            onClick={deselectApplication}
           />
         </div>
+        Application Overview
+      </h2>
+
+      <div className="w-full">
         <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3 items-start">
           <ApplicantDetails
             name={currentApplication.applicantName}
