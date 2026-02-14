@@ -41,16 +41,16 @@ export function ApplicationList() {
         <Table>
           <TableHeader className="h-20px text-base bg-gray-50">
             <TableRow className="bg-white-50 hover:bg-gray-50">
-              <TableHead className="font-semibold text-gray-700 py-7">
+              <TableHead className="hidden md:table-cell font-semibold text-gray-700 py-7">
                 Loan ID
               </TableHead>
               <TableHead className="font-semibold text-gray-700 py-7">
                 Applicant Name
               </TableHead>
-              <TableHead className="font-semibold text-gray-700 py-7">
+              <TableHead className="hidden md:table-cell font-semibold text-gray-700 py-7">
                 Loan Amount
               </TableHead>
-              <TableHead className="font-semibold text-gray-700 py-7">
+              <TableHead className="hidden lg:table-cell font-semibold text-gray-700 py-7">
                 Application Date
               </TableHead>
               <TableHead className="font-semibold text-gray-700 py-7">
@@ -71,7 +71,7 @@ export function ApplicationList() {
                 tabIndex={0}
                 aria-label={`View details for ${app.applicantName}, ${app.id}`}
               >
-                <TableCell className="font-mono text-sm font-medium text-(--primary-color) py-5">
+                <TableCell className="hidden md:table-cell font-mono text-sm font-medium text-(--primary-color) py-5">
                   {app.id}
                 </TableCell>
                 <TableCell className="font-medium text-gray-900 py-5">
@@ -79,10 +79,10 @@ export function ApplicationList() {
                     {app.applicantName}
                   </div>
                 </TableCell>
-                <TableCell className="font-medium text-gray-900 py-5">
+                <TableCell className="hidden md:table-cell font-medium text-gray-900 py-5">
                   {formatCurrency(app.loanAmount)}
                 </TableCell>
-                <TableCell className="font-medium text-gray-900 py-5">
+                <TableCell className="hidden lg:table-cell font-medium text-gray-900 py-5">
                   {formatDate(app.applicationDate)}
                 </TableCell>
                 <TableCell className="py-5">
