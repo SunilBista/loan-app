@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import * as utils from "@/lib/utils";
 import "@testing-library/jest-dom";
-import { LoanDetails } from "./loan-card";
+import { LoanDetails } from "./LoanDetails";
 
 vi.mock("lucide-react", () => ({
   DollarSign: () => <svg data-testid="icon-dollar" />,

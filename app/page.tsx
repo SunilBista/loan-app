@@ -1,11 +1,11 @@
 "use client";
-import { ApplicationList } from "@/components/ApplicationList";
-import { ApplicationOverview } from "@/components/ApplicationOverview";
-import { ApplicationSummary } from "@/components/ApplicationSummary";
+import { ApplicationList } from "@/components/application/ApplicationList";
+import { ApplicationOverview } from "@/components/application/ApplicationOverview";
+import { ApplicationSummary } from "@/components/application/ApplicationSummary";
 import {
   LoanApplicationProvider,
   useLoanApplication,
-} from "@/context/loan-application-context";
+} from "@/context/LoanContext";
 import { Building2 } from "lucide-react";
 
 function ApplicationContent() {

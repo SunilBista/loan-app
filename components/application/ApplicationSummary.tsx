@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useLoanApplication } from "@/context/loan-application-context";
+import { useLoanApplication } from "@/context/LoanContext";
 import { CardDetailsType, colorClasses } from "@/lib/type";
 import { formatCurrency } from "@/lib/utils";
 import { DollarSign, FileText, Clock, Eye } from "lucide-react";

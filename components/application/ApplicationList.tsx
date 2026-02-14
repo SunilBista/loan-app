@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight } from "lucide-react";
-import { StatusBadge } from "./ui/status-badge";
+import { StatusBadge } from "../ui/status-badge";
 import { formatCurrency, formatDate } from "@/lib/utils";
-import { useLoanApplication } from "@/context/loan-application-context";
+import { useLoanApplication } from "@/context/LoanContext";
 
 export function ApplicationList() {
   const { applications, selectApplication } = useLoanApplication();

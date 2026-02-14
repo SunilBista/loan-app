@@ -1,10 +1,10 @@
-import { LoanDetails } from "./user/loan-card";
-import ApplicationStatusControl from "./application/application-status-control";
+import { LoanDetails } from "../user/LoanDetails";
+import ApplicationStatusControl from "./ApplicationStatusControl";
 import { initialApplications } from "@/lib/mock-db";
-import { ApplicantDetails } from "./user/applicant-card";
-import { StatusHistory } from "./application/status-history";
+import { ApplicantDetails } from "../user/ApplicantDetails";
+import { StatusHistory } from "./StatusHistory";
 import { ArrowLeft } from "lucide-react";
-import { useLoanApplication } from "@/context/loan-application-context";
+import { useLoanApplication } from "@/context/LoanContext";
 import { useEffect } from "react";
 
 export const ApplicationOverview = () => {

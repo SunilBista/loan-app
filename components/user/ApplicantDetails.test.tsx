@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import * as utils from "@/lib/utils";
-import { ApplicantDetails } from "./applicant-card";
+import { ApplicantDetails } from "./ApplicantDetails";
 import "@testing-library/jest-dom";
 
 vi.mock("lucide-react", () => ({

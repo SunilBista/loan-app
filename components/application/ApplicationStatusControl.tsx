@@ -21,7 +21,7 @@ import {
 import { ApplicationStatus } from "@/lib/type";
 import { StatusBadge } from "../ui/status-badge";
 import { Card, CardHeader, CardTitle } from "../ui/card";
-import { useLoanApplication } from "@/context/loan-application-context";
+import { useLoanApplication } from "@/context/LoanContext";
 import { DEFAULT_STATUS_NOTES } from "@/lib/mock-db";
 import { isValidTransition } from "@/context/utils";
 import { toast } from "sonner";

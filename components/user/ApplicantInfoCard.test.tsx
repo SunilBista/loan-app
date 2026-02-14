@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import * as utils from "@/lib/utils";
 import "@testing-library/jest-dom";
-import { ApplicantInfoCard } from "./applicant-info";
+import { ApplicantInfoCard } from "./ApplicantInfoCard";
 import { ApplicantInfoCardProps } from "@/lib/type";
 
 vi.mock("@/components/ui/card", () => ({
