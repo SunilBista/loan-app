@@ -110,9 +110,6 @@ const ApplicationStatusControl = ({
             className="inline-flex items-center gap-2"
           />
         </p>
-        {!isLocked && (
-          <p className="text-gray-500 mb-4">Review this application.</p>
-        )}
 
         <Select
           value={selectedStatus}
