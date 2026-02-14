@@ -27,31 +27,6 @@ This is a comprehensive loan application management system designed for financia
 - **Notifications**: [Sonner](https://sonner.emilkowal.ski/) toast library
 - **Testing**: -[Vitest](https://vitest.dev/) -[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
-## Project Structure
-
-```
-loan-app/
-├── app/                          # Next.js App Router
-│   ├── globals.css              # Global styles
-│   ├── layout.tsx               # Root layout
-│   └── page.tsx                 # Main application page
-├── components/                   # React components
-│   ├── ApplicationList.tsx      # List view of applications
-│   ├── ApplicationOverview.tsx  # Detailed application view
-│   ├── ApplicationSummary.tsx   # Dashboard summary cards
-│   ├── application/             # Application-specific components
-│   ├── ui/                      # Reusable UI components
-│   └── user/                    # User-related components
-├── context/                     # React Context providers
-│   ├── loan-application-context.tsx  # Main app state
-│   └── utils.tsx                # Context utilities
-├── lib/                         # Utilities and types
-│   ├── mock-db.ts              # Sample data
-│   ├── type.ts                 # TypeScript definitions
-│   └── utils.ts                # Helper functions
-└── public/                      # Static assets
-```
-
 ## Quick Start
 
 ### Prerequisites
