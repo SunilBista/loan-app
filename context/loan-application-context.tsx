@@ -83,6 +83,7 @@ interface LoanContextValue {
     notes?: string,
   ) => boolean;
   resetApplication: (id: string) => void;
+  getPreviousStatus: (id: string) => ApplicationStatus | null;
 }
 
 const LoanContext = createContext<LoanContextValue | null>(null);
@@ -151,6 +152,17 @@ export function LoanApplicationProvider({
     dispatch({ type: "RESET", payload: { id } });
   }, []);
 
+  const getPreviousStatus = useCallback(
+    (id: string): ApplicationStatus | null => {
+      const application = initialApplications.find(
+        (application) => application.id === id,
+      );
+      if (!application) return null;
+      return application.currentStatus;
+    },
+    [state.applications],
+  );
+
   const value = useMemo<LoanContextValue>(
     () => ({
       applications: state.applications,
@@ -160,6 +172,7 @@ export function LoanApplicationProvider({
       deselectApplication,
       updateStatus,
       resetApplication,
+      getPreviousStatus,
     }),
     [
       state.applications,
@@ -169,6 +182,7 @@ export function LoanApplicationProvider({
       deselectApplication,
       updateStatus,
       resetApplication,
+      getPreviousStatus,
     ],
   );
 
