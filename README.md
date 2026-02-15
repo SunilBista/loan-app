@@ -128,7 +128,7 @@ Each status change is tracked with timestamps and notes for audit trails.
 
 1. **Components**: Add new components in the appropriate directory under `components/`
 2. **Types**: Define TypeScript interfaces in `lib/type.ts`
-3. **State Management**: Extend the context provider in `context/loan-application-context.tsx`
+3. **State Management**: Extend the context provider in `context/LoanContext.tsx`
 4. **Styling**: Follow Tailwind CSS utility-first approach with consistent design tokens
 
 ### Code Quality
